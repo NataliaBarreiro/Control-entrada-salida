@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <html>
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Perfil administrador</title>
+        </h:head>
+
+        <h:body>
+            <h:form>
+                <p:panel header="Perfil administrador">
+                    <h:panelGrid columns="2">
+                       
+                        <p:commandButton value="Parametrizar horario base" action="#{manejarBean.guardar()}" />
+                        <p:commandButton value="Generar reportes" action="#{manejarBean.guardar()}" />
+                        <p:commandButton value="Parametrizar usuarios" action="#{manejarBean.guardar()}" />   
+                        
+                    </h:panelGrid>  
+                </p:panel>
+
+            </h:form>
+        </h:body>
+    </html>
+</f:view>

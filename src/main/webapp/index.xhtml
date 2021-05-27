@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <html>
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Principal</title>
+        </h:head>
+
+        <h:body>
+            <h:form>
+                <p:panel header="B I E N V E N I D O S">
+                    <h:panelGrid columns="2">
+                        <h5>Ingrese el usuario:   </h5>  
+                        
+                        <p:inputText value="#{validarBean.usuario}"/>
+                        
+                        <h5>Ingrese la contraseña:   </h5>                        
+                        <p:password id="inlineFeedback" value="#{passwordView.contrasena}" feedback="true" inline="true"/>
+                        <br/>
+                        <br/>
+                        <p:commandButton value="Validar usuario" action="#{validarBean.guardar()}" />
+                        <br/>
+                        <br/>
+                        <p:button outcome="editar.xhtml" value="Ir a editar usuario"/>
+                        <br/>
+                        <br/>
+                        <p:button outcome="Crear.xhtml" value="Ir a crear usuario"/>
+                        <br/>
+                        <br/>
+                        <p:button outcome="Consultar.xhtml" value="Ir a consultar usuario"/>
+                        <br/>
+                        <br/>
+                        <p:button outcome="Eliminar.xhtml" value="Ir a eliminar usuario"/>
+                        <br/>
+                        <br/>
+                        <p:button outcome="Manejar.xhtml" value="Ir a manejar información"/>
+                    </h:panelGrid>  
+                </p:panel>
+            </h:form>
+        </h:body>
+    </html>
+</f:view>

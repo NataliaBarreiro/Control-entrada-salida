@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <html>
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Crear personal</title>
+        </h:head>
+
+        <h:body>
+            <h:form>
+                <p:panel header="Crear personal">
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Nombre completo:" />
+                        <p:inputText value="#{crearBean.nombre}"/>
+                        <h:outputLabel value="Numero de identificacion:" />
+                        <p:inputText value="#{crearBean.id}"/>
+                        <h:outputLabel value="Edad:" />
+                        <p:inputText value="#{crearBean.edad}"/>
+                        <h:outputLabel value="Cargo:" />
+                        <p:inputText value="#{crearBean.cargo}"/>
+                        <h:outputLabel value="Fecha de vinculacion:" />
+                        <p:calendar pattern="dd/MM/yyyy" value="#{crearBean.fechaVinculacion}"/>
+                        <h:outputLabel value="Rol a ejecutar en la empresa:" />
+                        <p:inputText value="#{crearBean.rol}"/>
+                        <p:commandButton value="Crear personal" action="#{crearBean.guardar()}" />
+                    </h:panelGrid>  
+                </p:panel>
+                
+            </h:form>
+        </h:body>
+    </html>
+</f:view>
